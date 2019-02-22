@@ -4,4 +4,4 @@ type User {
     age: Int
 }`
 
-module.exports = {userSchema};
+module.exports = { userSchema }

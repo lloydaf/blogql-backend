@@ -1,13 +1,12 @@
 class UserResolver {
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+  constructor (name, age) {
+    this.name = name
+    this.age = age
+  }
 
-    name(){
-        return this.name;
-    }
-
+  name () {
+    return this.name
+  }
 }
 
-module.exports = {UserResolver};
+module.exports = { UserResolver }

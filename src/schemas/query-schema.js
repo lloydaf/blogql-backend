@@ -1,5 +1,4 @@
-const {userSchema} = require('./user-schema');
-
+const { userSchema } = require('./user-schema')
 
 const querySchema = `
     type Query {
@@ -8,4 +7,4 @@ const querySchema = `
     ${userSchema}
 `
 
-module.exports = {querySchema}
+module.exports = { querySchema }
