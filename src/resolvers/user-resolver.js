@@ -1,12 +1,14 @@
-class UserResolver {
-  constructor (name, age) {
-    this.name = name
-    this.age = age
-  }
+const { userCollection } = require('../mongo/collections/user-collection')
+const { collection } = require('../mongo/interfaces/collection')
 
-  name () {
-    return this.name
-  }
+const resolveUser = (user) => {
+  return userCollection[collection].then(coll => {
+    console.log(coll)
+    return coll.find().toArray((err, result) => {
+      if (err) throw err
+      else return result
+    })
+  })
 }
 
-module.exports = { UserResolver }
+module.exports = resolveUser
